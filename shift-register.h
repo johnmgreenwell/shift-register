@@ -25,10 +25,10 @@ class ShiftRegister
     public:
         /**
          * @brief Constructor for ShiftRegister object
+         * @param spi_bus Reference to SPI bus used for shift register
          * @param cs_pin Pin number connected to select/latch clock input on the shift register
-         * @param spi_channel Identifier for HAL when more than one SPI channel is used
         */
-        ShiftRegister(uint8_t cs_pin, uint8_t spi_channel=0);
+        ShiftRegister(HAL::SPI& spi_bus, uint8_t cs_pin);
         
         /**
          * @brief Initialize ShiftRegister object
@@ -42,8 +42,8 @@ class ShiftRegister
         void write(uint8_t val) const;
 
     private:
+        HAL::SPI& _spi;
         HAL::GPIO _cs_pin;
-        HAL::SPI  _spi;
 };
 
 }

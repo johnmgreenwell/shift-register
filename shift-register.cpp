@@ -13,17 +13,18 @@
 namespace PeripheralIO
 {
 
-ShiftRegister::ShiftRegister(uint8_t cs_pin, uint8_t spi_channel)
-: _cs_pin(cs_pin)
-, _spi(spi_channel)
+ShiftRegister::ShiftRegister(HAL::SPI& spi_bus, uint8_t cs_pin)
+: _spi(spi_bus)
+, _cs_pin(cs_pin)
 {
-    _cs_pin.pinMode(GPIO_OUTPUT);
+    _cs_pin.pinMode(OUTPUT);
     _cs_pin.digitalWrite(true);
 }
 
 void ShiftRegister::init() const
 {
-    _spi.init();
+    _cs_pin.pinMode(OUTPUT);
+    _cs_pin.digitalWrite(true);
 }
 
 void ShiftRegister::write(uint8_t val) const
