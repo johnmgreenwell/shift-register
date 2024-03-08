@@ -33,8 +33,8 @@ int main()
 
 ...
     // Init SPI bus (as appropriate)
-	spi_bus.init();
-	
+    spi_bus.init();
+
     // Init shift register
     shiftreg.init();
 
