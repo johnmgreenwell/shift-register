@@ -1,0 +1,18 @@
+{
+    "name": "shift-register",
+    "version": "1.0.0",
+    "description": "Generic, portable, multi-instance shift register driver",
+    "keywords": "embedded, driver, hal, shift-register",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/johnmgreenwell/shift-register"
+    },
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*",
+    "build": {
+        "flags": [
+        "-I../../include"
+        ]
+    }
+}
