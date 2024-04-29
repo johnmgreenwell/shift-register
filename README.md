@@ -15,7 +15,7 @@ The HAL GPIO pin object `pinMode()` method should set as output when supplied wi
 ### Example
 
 ```cpp
-#include <shift-register.h>
+#include "shift-register.h"
 
 ...
 
