@@ -4,7 +4,7 @@ Generic, portable, multi-instance shift register driver.
 
 ## Overview
 
-This HAL-mediated custom shift register driver permits ease of use that is portable across many platforms.
+This HAL-mediated custom shift register driver permits ease of use that is designed to be platform-independent.
 
 ## Usage
 
